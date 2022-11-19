@@ -1,11 +1,20 @@
 <?php
+/**
+ * Theme functions and definitions
+ *
+ * @link https://developer.wordpress.org/themes/basics/theme-functions/
+ *
+ */
+?>
+
+
+
+<?php
 
 /* Add theme suppports */
 
 function dt_theme_support () {
-    /* Title */
     add_theme_support('title-tag');
-    /* Thumbnail Post Image */
     add_theme_support('post-thumbnails');
     
 }
@@ -44,21 +53,22 @@ add_action('wp_enqueue_scripts','dt_register_styles');
 
 /* Register custom scripts */
 
-function mt_register_scripts() {
+function dt_register_scripts() {
 
-    wp_enqueue_script('mytheme_script_js', get_template_directory_uri()."/assets/js/main.js", array(), '1.0',true);
+    wp_enqueue_script('mytheme_script_js', get_template_directory_uri()."/js/main.js", array(), '1.0',true);
     wp_enqueue_script('mytheme_script_jquery', "https://code.jquery.com/jquery-3.4.1.slim.min.js", array(), '3.4.1',true);
     wp_enqueue_script('mytheme_script_popper', "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js", array(), '1.16.0',true);
     wp_enqueue_script('mytheme_script_bootstrap', "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js", array(), '4.4.1',true);
     
 }
 
-add_action('wp_enqueue_scripts','mt_register_scripts');
+add_action('wp_enqueue_scripts','dt_register_scripts');
 
 
+/* Register widget areas */
 
 
-function mt_widget_areas() {
+function dt_widget_areas() {
 
     register_sidebar(
         array(
@@ -75,9 +85,7 @@ function mt_widget_areas() {
         );
 }
 
-add_action ('widgets_init','mt_widget_areas');
-
-/* Register custom post types */
+add_action ('widgets_init','dt_widget_areas');
 
 
 ?>

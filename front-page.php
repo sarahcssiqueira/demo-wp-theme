@@ -1,28 +1,23 @@
-	<?php
-	get_header();
-	?>
+<?php
+/**
+ * The template for displaying a static front page.
+ *
+ */
+?>
+
+<?php get_header(); ?>
 
 		<article class="content px-3 py-5 p-md-5">
 
-			<?php
-			
-			if (have_posts()) {
+			<?php if ( have_posts () ) {
 
-				while(have_posts()) {
-					the_post();
-					the_content();
-				}
-			};
-			?>
-
+					while(have_posts()) {
+					
+						the_post();
+						the_content();
+					}
+			};?>
 
 	    </article>
-    
-    </div>
 
-	<?php
-	get_footer();
-	?>
-
-</body>
-</html> 
+<?php get_footer();?>

@@ -1,8 +1,3 @@
-A Simples WordPress template from a Prototype
+WordPress Demo Theme
 
-To install
-
-suuports:
-
-supports widgets
-
+A simple WordPress Demo Theme, created from a Prototype specially to show some skills.

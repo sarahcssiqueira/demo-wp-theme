@@ -1,3 +1,13 @@
+<?php
+/**
+ * Template part for displaying archive.
+ *
+ * @link https://codex.wordpress.org/Template_Hierarchy
+ *
+ */
+
+?>
+
 <div class="container">
 
 <div class="post mb-5">
@@ -30,8 +40,7 @@
 					
 				<a class="more-link" href="<?php the_permalink();?>">Read more &rarr;</a>
 					    
-				</div><!--//media-body-->
-				</div><!--//media-->
-			    </div>
+			</div>
+		</div>
 
 </div>
