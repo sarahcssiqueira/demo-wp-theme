@@ -2,21 +2,20 @@
 
 /* Add theme suppports */
 
-function mt_theme_support () {
-    /* Theme suppport Title */
+function dt_theme_support () {
+    /* Title */
     add_theme_support('title-tag');
-    /* Theme suppport Custom Logo */
-    add_theme_support('custom-logo');
-    /* Theme suppport Thumbnail Post Image */
+    /* Thumbnail Post Image */
     add_theme_support('post-thumbnails');
+    
 }
 
-add_action ('after_theme_setup','mt_theme_support');
+add_action ('after_setup_theme','dt_theme_support');
 
 
 /*Register menus */
 
-function mt_menus () {
+function dt_menus () {
     
     $locations = array(
            'primary'=>"Primary Menu" ,
@@ -26,12 +25,12 @@ function mt_menus () {
     register_nav_menus($locations);
 }
 
-add_action ('init', 'mt_menus');
+add_action ('init', 'dt_menus');
 
 
 /* Register custom style */
 
-function mt_register_styles() {
+function dt_register_styles() {
         
     $version = wp_get_theme()->get( 'Version' );
 
@@ -41,7 +40,7 @@ function mt_register_styles() {
 
 }
 
-add_action('wp_enqueue_scripts','mt_register_styles');
+add_action('wp_enqueue_scripts','dt_register_styles');
 
 /* Register custom scripts */
 
@@ -56,6 +55,27 @@ function mt_register_scripts() {
 
 add_action('wp_enqueue_scripts','mt_register_scripts');
 
+
+
+
+function mt_widget_areas() {
+
+    register_sidebar(
+        array(
+            'before_title'=>'',
+            'after_title'=> '',
+            'before_widget'=>'',
+            'after_widget'=>''
+        ),
+        array(
+            'name'=>'Sidebar Area',
+            'id'=>'sidebar-1',
+            'description'=>'Sidebar Widget Area',
+        )
+        );
+}
+
+add_action ('widgets_init','mt_widget_areas');
 
 /* Register custom post types */
 

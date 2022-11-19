@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
-    <title><?php the_title(); ?></title>
+    <title><?php echo get_bloginfo('name'); ?></title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Blog Site Template">
+    <meta name="description" content="WordPress Theme">
     <meta name="author" content="https://sarahcssiqueira.ga/">    
     <link rel="shortcut icon" href=""> 
 	
@@ -18,7 +18,8 @@
 <body>
     
     <header class="header text-center">	    
-	    <a class="site-title pt-lg-4 mb-0" href="index.html">SiteName.dev</a>
+	    <a class="site-title pt-lg-4 mb-0" href="<?php echo get_home_url(); ?>">
+			<?php echo get_bloginfo('name'); ?></a>
         
 	    <nav class="navbar navbar-expand-lg navbar-dark" >
            
@@ -27,17 +28,6 @@
 			</button>
 
 			<div id="navigation" class="collapse navbar-collapse flex-column" >
-				
-				<?php
-				/*
-				if (function_exists('the_custom_logo')){
-					the_custom_logo();
-				}
-				*/
-				?>
-
-				<!-- <img class="mb-3 mx-auto logo" src="images/logo.png" alt="logo" >			 -->
-				
 
 				<?php
 					wp_nav_menu(
@@ -51,14 +41,23 @@
 				?>
 
 				<ul class="social-list list-inline py-3 mx-auto">
-					<li class="list-inline-item"><a href="https://www.linkedin.com/in/sarahcssiqueira/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-					<li class="list-inline-item"><a href="https://github.com/sarahcssiqueira"><i class="fab fa-github-alt fa-fw"></i></a></li>
+					<li class="list-inline-item">
+						<a href="https://www.linkedin.com/in/sarahcssiqueira/"><i class="fab fa-linkedin-in fa-fw"></i>
+						</a>
+					</li>
+					<li class="list-inline-item">
+						<a href="https://github.com/sarahcssiqueira"><i class="fab fa-github-alt fa-fw"></i>
+						</a>
+					</li>
 					
 				</ul>
 
 			</div>
-            
+
+     
 		</nav>
+
+		
     </header>
 
     <div class="main-wrapper">

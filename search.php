@@ -15,14 +15,9 @@
 					
 				}
 			};
+
+            /*if no posts show: nothing found*/
 			?>
-
-
-		<?php
-
-				the_posts_pagination();
-				
-		?>
 
 	    </article>
     

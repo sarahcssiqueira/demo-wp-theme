@@ -2,6 +2,7 @@
 		   
     <p class="copyright">
         <a href="https://sarahcssiqueira.ga/">By Sarah Siqueira</a>
+        <p>Note: Simple Demo Theme specially created for Blacksmith Agency Interview.</p>
     </p>
 		   
 </footer>

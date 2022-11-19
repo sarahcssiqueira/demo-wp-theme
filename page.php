@@ -1,28 +1,30 @@
 <?php
 	get_header();
-	?>
+?>
 
-		<article class="content px-3 py-5 p-md-5">
+	<article class="content px-3 py-5 p-md-5">
 
-			<?php
+		<?php
 			
 			if (have_posts()) {
 
 				while(have_posts()) {
 					the_post();
-					the_content();
+					
+					get_template_part('template-parts/content', 'page');
+					
 				}
 			};
-			?>
+		?>
 
-	    </article>
+	</article>
     
-    </div>
+</div>
 
 
-	<?php
+<?php
 	get_footer();
-	?>
+?>
 
 </body>
 </html> 
