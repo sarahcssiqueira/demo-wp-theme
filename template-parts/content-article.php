@@ -11,7 +11,7 @@
 
 <div class="container">
 	<header class="content-header">
-		<div class="meta mb-3">
+		<div class="post">
             <span class="date">
                 <?php the_date(); ?>
             </span>
@@ -30,5 +30,3 @@
 
 
 <?php the_content();?>
-
-<?php comments_template();?>
